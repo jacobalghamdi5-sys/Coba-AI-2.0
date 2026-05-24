@@ -1,0 +1,17 @@
+{
+  "appName": "Coba AI Ultra Matrix",
+  "version": "2.5.0-quantum",
+  "serverStatus": "100% ONLINE",
+  "maxTokens": 4096,
+  "quantumCore": true,
+  "modelsLoaded": [
+    "Google Gemini 3.5 Thinking",
+    "Google Gemini 3.1 Pro",
+    "Google Gemini 3 Flash",
+    "Grok 4 Base",
+    "Grok 4 Regular",
+    "Claude Sonnet 4.6",
+    "Perplexity Sonnet",
+    "Microsoft Copilot M365"
+  ]
+}
