@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coba AI 2.0 - HyperModern Core</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- WARNING 1: Classic Welcome Screen Overlay -->
+  <div id="warning-screen" class="warning-overlay">
+    <div class="warning-box">
+      <h1>⚠️ SYSTEM NOTICE</h1>
+      <p>This intelligence matrix only processes mathematical equations.</p>
+      <p class="sub-warning">Strictly accepts math symbols. Word formulas are blocked.</p>
+      <div class="sidebar-divider"></div>
+      <p class="notice-text">The mode "Coba CodeMaker" is NOT a math AI, it will only tell you the code when you request.</p>
+      <button class="warning-ok-btn" onclick="acceptWarning()">INITIALIZE</button>
+    </div>
+  </div>
+
+  <!-- WARNING 2: Model Tag Matrix Guide Overlay (Appears 2nd) -->
+  <div id="tag-warning" class="warning-overlay" style="display: none; opacity: 1;">
+    <div class="warning-box" style="border-color: #a87ffb; box-shadow: 0 0 30px rgba(168, 127, 251, 0.25); max-width: 460px;">
+      <h1 style="color: #a87ffb;">🏷️ MODEL TAG MATRIX</h1>
+      <p style="text-align: left; font-size: 15px; margin-bottom: 12px; color: #fff;">• Modes that say <strong>"New"</strong> mean they are the latest AI models in Coba.</p>
+      <p style="text-align: left; font-size: 15px; margin-bottom: 12px; color: #00f2fe;">• <strong>"Math"</strong> tag means they are math AIs.</p>
+      <p style="text-align: left; font-size: 15px; margin-bottom: 12px; color: #ffbc00;">• <strong>"Code"</strong> tag means they will code for you.</p>
+      <p style="text-align: left; font-size: 15px; margin-bottom: 24px; color: #00ff66;">• <strong>"Code/Math"</strong> tag means they code AND do math for you.</p>
+      <button class="warning-ok-btn" style="background: linear-gradient(45deg, #9b72cb, #a87ffb);" onclick="closeTagWarning()">CONFIRM MATRIX RULES</button>
+    </div>
+  </div>
+
+  <!-- WARNING 3: CodeMaker Intercept Warning Overlay (Appears on dropdown select) -->
+  <div id="codemaker-warning" class="warning-overlay" style="display: none; opacity: 1;">
+    <div class="warning-box" style="border-color: #00f2fe; box-shadow: 0 0 30px rgba(0, 242, 254, 0.25);">
+      <h1 style="color: #00f2fe;">💻 CODEMAKER INTERCEPT</h1>
+      <p>This is not a math AI; it only tells you code when you request.</p>
+      <button class="warning-ok-btn" style="background: linear-gradient(45deg, #0072ff, #4facfe);" onclick="closeCodeMakerWarning()">UNDERSTOOD</button>
+    </div>
+  </div>
+
+  <!-- Main Gemini Layout Application -->
+  <div class="gemini-app">
+    <!-- Sidebar Navigation Controls -->
+    <div class="sidebar">
+      <div class="brand">✨ COBA AI 2.0</div>
+      <button class="new-chat-btn" onclick="startNewChat()">➕ New Chat</button>
+      <div class="sidebar-divider"></div>
+      <div class="chat-list" id="chat-list"></div>
+      <div class="sidebar-divider"></div>
+      <button class="reset-btn" onclick="resetAllHistory()">🗑️ Reset Chat History</button>
+    </div>
+
+    <!-- Main Chat Window Workspace -->
+    <div class="main-chat">
+      <div class="top-bar">
+        <label for="model-select">Active Array Processor: </label>
+        <select id="model-select" onchange="changeModel()">
+          <!-- Classic Standby Core Models -->
+          <option value="flash">⚡ Coba 3 Flash [Math]</option>
+          <option value="thinking">🧠 Coba 3.5 Thinking [Math]</option>
+          <option value="ultra">👑 Coba 4.5 Thinking AI Ultra [Math]</option>
+          
+          <!-- Your Brand-New Custom Architecture Models -->
+          <option value="codemath">💻 Coba 3 "Code/Math" [New] [Code/Math]</option>
+          <option value="cmpro">🚀 Coba CodeMaker Pro "Code" [New] [Code]</option>
+          <option value="cmanimation">🎬 Coba CodeMaker Animation "Animated Code" [New] [Code]</option>
+          <option value="cmcss">🎨 Coba CodeMaker CSS "Style Code" [New] [Code]</option>
+          <option value="cmclassic">🛠️ Coba CodeMaker [New] [Code]</option>
+          <option value="c5pro">🔮 Coba 5 Thinking Pro "Smartest Coba Model" [New] [Code/Math]</option>
+        </select>
+      </div>
+
+      <div class="chat-area" id="chat-area">
+        <div class="welcome-screen" id="welcome-screen">
+          <h1>Hello, User.</h1>
+          <h2>How can I assist your calculations today?</h2>
+        </div>
+        <div id="messages-container"></div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-container">
+          <input type="text" id="user-msg" placeholder="Compute mathematical configurations..." onkeypress="handleKeyPress(event)" />
+          <button onclick="handleSend()" class="glow-send-btn">➔</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Injects the 100% Real Algebra/Calculus library! -->
+  <script src="https://cloudflare.com"></script>
+
+  <!-- Connects the HTML to your JS brains -->
+  <script src="script.js"></script>
+</body>
+</html>
