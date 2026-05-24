@@ -1,0 +1,9 @@
+{
+  "network_routing_manifest": {
+    "primary_hosting_node": "GitHub Enterprise Pages Cloud",
+    "dns_proxy_layer": "Cloudflare CDN Edge Layer",
+    "shortcut_pointer_gateway": "https://lnk.ink",
+    "ssl_status": "HTTPS_SECURE_ENCRYPTED",
+    "bandwidth_allocation": "UNLIMITED_FREE"
+  }
+}
